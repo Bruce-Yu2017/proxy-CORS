@@ -1,0 +1,4 @@
+<div *ngIf="cars.length > 0">
+  <app-car-card *ngFor="let car of cars" [car]="car"></app-car-card>
+</div>
+<p *ngIf="cars.length == 0">No car found.</p>

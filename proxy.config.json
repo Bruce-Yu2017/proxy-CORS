@@ -1,0 +1,7 @@
+{
+    "/cars/*": {
+        "target": "https://yoshi-frontend-challenge.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

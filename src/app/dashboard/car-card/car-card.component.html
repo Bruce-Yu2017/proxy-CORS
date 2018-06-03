@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="!edit">
+    <p>{{car.name}}'s fuel level: <app-fuel-level-report [car]="car"></app-fuel-level-report></p>
+    <button (click)="this.edit = true">rename</button>
+  </div>
+  <form *ngIf="edit" #carCard="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="form-control"
+             [(ngModel)]="car.name" name="name">
+    </div>
+    <button type="submit">rename</button>
+  </form>
+</div>
